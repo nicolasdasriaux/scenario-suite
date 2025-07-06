@@ -20,7 +20,7 @@ public class SimpleFailingScenarioSuiteTest {
             assertThat(false).isTrue();
         }
 
-        @Step("Stop") // Sucesss
+        @Step("Stop")
         void b() {
         }
     }

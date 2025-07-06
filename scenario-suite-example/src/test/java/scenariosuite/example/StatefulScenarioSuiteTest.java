@@ -13,42 +13,10 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @ScenarioSuite("Scenario based tests")
-public class ExampleScenarioSuiteTest {
-    @Scenario("Scenario 1")
-    class _1 {
-        @Step("Start") // Succès
-        void a_1() {
-        }
-
-        @Step("Process") // ÉCHEC (assertion)
-        void a_2() {
-            assertThat(false).isTrue();
-        }
-
-        @Step("Stop") // Passé
-        void b() {
-        }
-    }
-
-    @Scenario("Scenario 2")
-    class _2 {
-        @Step("Start") // ÉCHEC (exception)
-        void a() {
-            throw new RuntimeException();
-        }
-
-        @Step("Process") // Passé
-        void b() {
-        }
-
-        @Step("Stop") // Passé
-        void c() {
-        }
-    }
-
+public class StatefulScenarioSuiteTest {
     @ScenarioGroup("Scenarios 3")
-    class _3 {
-        // Base de scénario permettant de préserver de l'état entre les étapes
+    class _1 {
+        // A base scenario allowing to preserve state between steps
         class Base {
             List<String> messages;
 
@@ -76,7 +44,7 @@ public class ExampleScenarioSuiteTest {
         }
 
         @Scenario("Scenario 3.1")
-        class _3_1 extends Base {
+        class _1_1 extends Base {
             @Step("Process A")
             void a() {
                 sendMessage("A1");
@@ -96,7 +64,7 @@ public class ExampleScenarioSuiteTest {
         }
 
         @Scenario("Scenario 3.2")
-        class _3_2 extends Base {
+        class _1_2 extends Base {
             @Step("Process A")
             void a() {
                 sendMessage("A1");

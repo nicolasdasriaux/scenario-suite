@@ -32,7 +32,7 @@ public class SimpleScenarioSuiteTest {
         void a_2() {
         }
 
-        @Step("Stop") // Sucesss
+        @Step("Stop")
         void b() {
         }
     }

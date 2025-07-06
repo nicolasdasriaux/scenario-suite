@@ -41,7 +41,7 @@ public class SimpleScenarioSuiteTest {
             void a() {
             }
 
-            @Step("Process B")// Success
+            @Step("Process B")
             void b() {
             }
         }
