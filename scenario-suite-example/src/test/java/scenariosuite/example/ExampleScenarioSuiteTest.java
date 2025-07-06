@@ -52,18 +52,6 @@ public class ExampleScenarioSuiteTest {
         class Base {
             List<String> messages;
 
-            @BeforeEach
-            void beforeEach() {
-                reset();
-            }
-
-            @AfterEach
-            void afterEach() {
-                System.out.printf("messages=%s%n", messages);
-            }
-
-            // Utilitaires de consultation et de modification de l'état
-
             void reset() {
                 messages = new ArrayList<>();
             }
@@ -74,6 +62,16 @@ public class ExampleScenarioSuiteTest {
 
             List<String> sentMessages() {
                 return messages;
+            }
+
+            @BeforeEach
+            void beforeEach() {
+                reset();
+            }
+
+            @AfterEach
+            void afterEach() {
+                System.out.printf("messages=%s%n", messages);
             }
         }
 
