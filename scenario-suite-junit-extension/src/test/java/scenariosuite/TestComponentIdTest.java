@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class TestComonentIdTest {
+class TestComponentIdTest {
     @Test
     void parse() {
         assertThat(TestComponentId.parse("A")).isEqualTo(TestComponentId.of("A"));
