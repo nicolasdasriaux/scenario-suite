@@ -1,5 +1,22 @@
 # Scenario Suite for JUnit 5
 
+**Scenario Suite for JUnit 5** is a JUnit extension for **scenario-based testing**.
+
+A **scenario suite** (a class annotated with `@ScenarioSuite`)
+consists of **scenarios** (nested classes annotated with `@Scenario`)
+composed of **steps** (methods annotated with `@Step`).
+
+Scenarios can also be organized into potentially hierarchical **scenario groups**
+(nested classes annotated with `@ScenarioGroup`).
+
+The steps within a scenario are executed in an order conventionally defined by their method names.
+Scenarios are also executed in a similar order based o class name.
+
+If a **step fails**, the **subsequent steps** in that scenario are **skipped**.
+
+Text labels are provided as parameters for each of the mentioned annotations
+allowing legible display in IDEs such as IntelliJ
+
 ## Writing a scenario suite
 
 ```java
