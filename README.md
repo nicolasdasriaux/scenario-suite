@@ -10,7 +10,7 @@ Scenarios can also be organized into potentially hierarchical **scenario groups*
 (nested classes annotated with `@ScenarioGroup`).
 
 The steps within a scenario are executed in an order conventionally defined by their method names.
-Scenarios are also executed in a similar order based o class name.
+Scenarios are also executed in a similar order based on class name.
 
 If a **step fails**, the **subsequent steps** in that scenario are **skipped**.
 
