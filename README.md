@@ -1,6 +1,6 @@
 # Scenario Suite for JUnit 5
 
-## Simple Scenario Suite
+## Writing a sceanrio suite
 
 ```java
 @ScenarioSuite("Scenario based tests")
@@ -58,7 +58,9 @@ The result in the IDE such as IntelliJ will look like the following.
 
 ![](success.png)
 
-## Scenario Failure will skip steps
+## Skipping steps after failure
+
+Steps after a failure in a scenario will be skipped.
 
 ```java
 @ScenarioSuite("Scenario based tests")
