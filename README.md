@@ -1,6 +1,6 @@
 # Scenario Suite for JUnit 5
 
-## Writing a sceanrio suite
+## Writing a scenario suite
 
 ```java
 @ScenarioSuite("Scenario based tests")
